@@ -1,0 +1,12 @@
+<% content_for :title, "Editing llm config" %>
+
+<h1>Editing llm config</h1>
+
+<%= render "form", llm_config: @llm_config %>
+
+<br>
+
+<div>
+  <%= link_to "Show this llm config", @llm_config %> |
+  <%= link_to "Back to llm configs", llm_configs_path %>
+</div>

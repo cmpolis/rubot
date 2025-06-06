@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @llm_config %>
+
+<div>
+  <%= link_to "Edit this llm config", edit_llm_config_path(@llm_config) %> |
+  <%= link_to "Back to llm configs", llm_configs_path %>
+
+  <%= button_to "Destroy this llm config", @llm_config, method: :delete %>
+</div>

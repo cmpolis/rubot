@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_06_06_175257) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_06_230400) do
   create_table "agents", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.text "description"
     t.string "name"
     t.text "prompt_template"
     t.datetime "updated_at", null: false
+    t.integer "default_config_id"
+    t.index ["default_config_id"], name: "index_agents_on_default_config_id"
   end
 
   create_table "llm_configs", force: :cascade do |t|
@@ -44,10 +46,10 @@ ActiveRecord::Schema[8.1].define(version: 2025_06_06_175257) do
   create_table "steps", force: :cascade do |t|
     t.json "content"
     t.datetime "created_at", null: false
-    t.integer "kind"
     t.integer "run_id", null: false
     t.integer "sequence"
     t.datetime "timestamp"
+    t.integer "kind"
     t.datetime "updated_at", null: false
     t.index ["run_id"], name: "index_steps_on_run_id"
   end
@@ -61,6 +63,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_06_06_175257) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "agents", "llm_configs", column: "default_config_id"
   add_foreign_key "runs", "agents"
   add_foreign_key "steps", "runs"
 end

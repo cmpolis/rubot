@@ -65,6 +65,6 @@ class AgentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def agent_params
-      params.require(:agent).permit(:name, :description)
+      params.require(:agent).permit(:name, :description, :default_config_id)
     end
 end

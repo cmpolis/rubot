@@ -1,4 +1,4 @@
-class CreateRuns < ActiveRecord::Migration[8.1]
+class CreateRuns < ActiveRecord::Migration[8.0]
   def change
     create_table :runs do |t|
       t.references :agent, null: false, foreign_key: true

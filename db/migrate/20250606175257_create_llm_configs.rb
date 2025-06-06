@@ -1,4 +1,4 @@
-class CreateLlmConfigs < ActiveRecord::Migration[8.1]
+class CreateLlmConfigs < ActiveRecord::Migration[8.0]
   def change
     create_table :llm_configs do |t|
       t.string :name

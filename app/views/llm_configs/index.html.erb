@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Llm configs" %>
+
+<h1>Llm configs</h1>
+
+<div id="llm_configs">
+  <% @llm_configs.each do |llm_config| %>
+    <%= render llm_config %>
+    <p>
+      <%= link_to "Show this llm config", llm_config %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New llm config", new_llm_config_path %>

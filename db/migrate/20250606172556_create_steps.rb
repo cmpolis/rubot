@@ -1,4 +1,4 @@
-class CreateSteps < ActiveRecord::Migration[8.1]
+class CreateSteps < ActiveRecord::Migration[8.0]
   def change
     create_table :steps do |t|
       t.references :run, null: false, foreign_key: true
