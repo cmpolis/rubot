@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: AgentOne
+  name: MyString
   description: MyText
-  prompt_template: MyText
+  parameters_schema: 
+  clazz: MyString
 
 two:
-  name: AgentTwo
+  name: MyString
   description: MyText
-  prompt_template: MyText
+  parameters_schema: 
+  clazz: MyString

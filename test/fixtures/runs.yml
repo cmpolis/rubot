@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agent: one
+  input_data: 
+  status: 1
+  output: MyText
+  started_at: 2025-06-06 10:25:15
+  completed_at: 2025-06-06 10:25:15
+  error_message: MyText
+
+two:
+  agent: two
+  input_data: 
+  status: 1
+  output: MyText
+  started_at: 2025-06-06 10:25:15
+  completed_at: 2025-06-06 10:25:15
+  error_message: MyText
