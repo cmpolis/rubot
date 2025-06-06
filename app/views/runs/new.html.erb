@@ -1,5 +1,17 @@
-<div>
-  <h1>New Run for <%= @agent.name %></h1>
+<div class="container">
+  <h2 class="title">Create a Run for <%= @agent.name %></h2>
+  <%= form_with(model: [@agent, @run], local: true, class: "form") do |f| %>
+    <div class="field">
+      <%= f.label :input_data, "Prompt", class: "label" %>
+      <div class="control">
+        <%= f.text_area :input_data, class: "textarea", placeholder: "Enter your prompt here...", rows: 4 %>
+      </div>
+    </div>
 
-  <%# Add form for creating a new run here %>
+    <div class="field">
+      <div class="control">
+        <%= f.submit "Create Run", class: "button is-primary" %>
+      </div>
+    </div>
+  <% end %>
 </div>

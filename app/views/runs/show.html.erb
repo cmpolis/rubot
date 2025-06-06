@@ -5,5 +5,17 @@
     <%= link_to @agent.name, agent_path(@agent) %>
   </div>
 
+  <% @run.steps.each do |step| %>
+    <div class="section">
+      <% if step.kind == 'llm_response' %>
+        Response:
+      <% elsif step.kind == 'llm_request' %>
+        Request:
+      <% end %>
+      <%= step.sequence %>
+      <%= step.content %>
+    </div>
+  <% end %>
+
   <%# Add more run details here as needed %>
 </div>

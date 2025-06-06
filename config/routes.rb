@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 
   resources :agents do
-    resources :runs, only: [:show, :new]
+    resources :runs, only: [:show, :new, :index, :create]
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

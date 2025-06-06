@@ -2,6 +2,19 @@
 
 <%= render @agent %>
 
+<% @agent.runs.each do |run| %>
+  <%= link_to agent_run_path(@agent, run) do %>
+    Run: <%= run.input_data %>
+  <% end %>
+  <br />
+<% end %>
+
+<hr />
+
+<%= link_to 'New run', new_agent_run_path(@agent) %>
+
+<hr />
+
 <div>
   <%= link_to "Edit this agent", edit_agent_path(@agent) %> |
   <%= link_to "Back to agents", agents_path %>
