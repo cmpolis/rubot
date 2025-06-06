@@ -1,24 +1,7 @@
-# README
+# Rubot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### A simple, Ruby based agentic-AI framework.
 
-Things you may want to cover:
 
-* Ruby version
+Copyright &copy; Chris Polis 2025
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
