@@ -13,7 +13,8 @@ class LlmConfigsController < ApplicationController
     @llm_config = LlmConfig.new(llm_config_params)
 
     if @llm_config.save
-      redirect_to llm_configs_path, notice: 'LLM configuration was successfully created.'
+      redirect_to @llm_config, notice: 'LLM configuration was successfully
+created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,7 +25,8 @@ class LlmConfigsController < ApplicationController
 
   def update
     if @llm_config.update(llm_config_params)
-      redirect_to llm_configs_path, notice: 'LLM configuration was successfully updated.'
+      redirect_to @llm_config, notice: 'LLM configuration was successfully
+updated.'
     else
       render :edit, status: :unprocessable_entity
     end

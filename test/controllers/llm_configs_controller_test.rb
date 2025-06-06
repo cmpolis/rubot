@@ -17,7 +17,9 @@ class LlmConfigsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create llm_config" do
     assert_difference("LlmConfig.count") do
-      post llm_configs_url, params: { llm_config: {} }
+      post llm_configs_url, params: { llm_config: {
+        name: 'new-name', description: 'new-description', provider:
+          'openai', version: '1.0' } }
     end
 
     assert_redirected_to llm_config_url(LlmConfig.last)
@@ -34,7 +36,9 @@ class LlmConfigsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update llm_config" do
-    patch llm_config_url(@llm_config), params: { llm_config: {} }
+    patch llm_config_url(@llm_config), params: { llm_config: {
+      name: 'updated-name', description: 'updated-description', provider:
+        'openai', version: '1.0' } }
     assert_redirected_to llm_config_url(@llm_config)
   end
 

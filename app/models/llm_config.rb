@@ -1,5 +1,5 @@
 class LlmConfig < ApplicationRecord
-  validates :provider, presence: true
+  validates :provider, presence: true, inclusion: { in: %w[openai] }
   validates :version, presence: true
   validates :name, presence: true, uniqueness: true
 
