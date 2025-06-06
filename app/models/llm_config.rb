@@ -1,0 +1,2 @@
+class LlmConfig < ApplicationRecord
+end

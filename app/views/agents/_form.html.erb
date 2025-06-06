@@ -1,8 +1,7 @@
-<%= form_with(model: agent) do |form| %>
+<%= form_with(model: agent, class: "box") do |form| %>
   <% if agent.errors.any? %>
-    <div style="color: red">
+    <div class="notification is-danger">
       <h2><%= pluralize(agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
-
       <ul>
         <% agent.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,7 +10,23 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+    <div class="control">
+      <%= form.text_field :name, class: "input", placeholder: "Enter agent name" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, class: "label" %>
+    <div class="control">
+      <%= form.text_area :description, class: "textarea", placeholder: "Enter agent description" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= form.submit class: "button is-primary" %>
+    </div>
   </div>
 <% end %>

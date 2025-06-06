@@ -1,0 +1,7 @@
+<h1 class="title">Rubot</h1>
+
+<hr />
+<% @agents.each do |agent| %>
+  <%= render agent %>
+  <%= link_to 'New run', new_agent_run_path(agent) %>
+<% end %>

@@ -24,6 +24,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="container">
+        <%= link_to "Home", root_path %>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
