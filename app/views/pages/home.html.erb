@@ -2,6 +2,14 @@
 
 <hr />
 <% @agents.each do |agent| %>
-  <%= render agent %>
+  <%= link_to agent do %>
+    <h2 class="subtitle">
+      <%= agent.name %>
+    </h2>
+  <% end %>
   <%= link_to 'New run', new_agent_run_path(agent) %>
+
 <% end %>
+
+<hr />
+<%= link_to 'New Agent', new_agent_path %>
