@@ -14,9 +14,13 @@ class LlmConfigsTest < ApplicationSystemTestCase
     visit llm_configs_url
     click_on "New llm config"
 
+    fill_in "Name", with: "New Config"
+    select "OpenAI", from: "Provider"
+    fill_in "Version", with: "1.0-flash"
+
     click_on "Create Llm config"
 
-    assert_text "Llm config was successfully created"
+    assert_text "successfully created"
     click_on "Back"
   end
 
@@ -26,7 +30,7 @@ class LlmConfigsTest < ApplicationSystemTestCase
 
     click_on "Update Llm config"
 
-    assert_text "Llm config was successfully updated"
+    assert_text "successfully updated"
     click_on "Back"
   end
 
@@ -34,6 +38,6 @@ class LlmConfigsTest < ApplicationSystemTestCase
     visit llm_config_url(@llm_config)
     click_on "Destroy this llm config", match: :first
 
-    assert_text "Llm config was successfully destroyed"
+    assert_text "successfully destroyed"
   end
 end

@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  provider: MyString
-  version: MyString
+  name: ConfigOne
+  provider: openai
+  version: gpt-4.0-nano
   default_parameters: 
 
 two:
-  name: MyString
-  provider: MyString
-  version: MyString
-  default_parameters: 
+  name: ConfigTwo
+  provider: openai
+  version: gpt-4.0-nano
+  default_parameters:
