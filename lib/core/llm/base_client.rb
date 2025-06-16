@@ -9,7 +9,7 @@ module RubotCore
         @model_config_data = model_config_data
         @logger = logger
       end
-      
+
       def chat(messages, options = {})
         raise NotImplementedError, "#{self.class} does not implement chat"
       end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../llm/client_factory'
+require_relative "../llm/client_factory"
 
 module RubotCore
   class Runner
@@ -16,7 +16,7 @@ module RubotCore
     end
 
     def run(initial_prompt)
-      initial_message = [{ role: "user", content: initial_prompt }]
+      initial_message = [ { role: "user", content: initial_prompt } ]
       next_message = initial_message.clone
 
       response = nil
@@ -40,6 +40,5 @@ module RubotCore
       end
       response
     end
-
   end
 end

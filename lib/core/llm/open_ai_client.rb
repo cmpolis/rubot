@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'base_client'
-require 'openai'
+require_relative "base_client"
+require "openai"
 
 module RubotCore
   module Llm
-
     # Interface for calling OpenAI
     class OpenAiClient < BaseClient
       def initialize(model_config, logger: Logger.new(STDOUT))
@@ -34,7 +33,7 @@ module RubotCore
           {
             role: choice["role"],
             content: choice["content"],
-            tool_calls: choice["tool_calls"],
+            tool_calls: choice["tool_calls"]
           }.compact
         end
       end
@@ -42,10 +41,10 @@ module RubotCore
       private
         def prepare_request(messages, options = {})
           if messages.is_a?(String)
-            messages = [{ role: "user", content: messages }]
+            messages = [ { role: "user", content: messages } ]
           end
           {
-            model: model_config_data[:model] || 'gpt-4.1-nano',
+            model: model_config_data[:model] || "gpt-4.1-nano",
             messages: messages,
             # messages: [{ role: "user", content: "Hello, model"}],
             # temperature: options.fetch(:temperature,

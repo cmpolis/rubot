@@ -1,6 +1,6 @@
 class RunsController < ApplicationController
   before_action :set_agent
-  before_action :set_run, only: [:show]
+  before_action :set_run, only: [ :show ]
 
   def show
   end
@@ -23,7 +23,6 @@ class RunsController < ApplicationController
     # Just use any model config
     # Set agent template
     # Run the thing
-
   end
 
   private

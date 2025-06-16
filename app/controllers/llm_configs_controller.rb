@@ -1,5 +1,5 @@
 class LlmConfigsController < ApplicationController
-  before_action :set_llm_config, only: [:edit, :update, :show, :destroy]
+  before_action :set_llm_config, only: [ :edit, :update, :show, :destroy ]
 
   def index
     @llm_configs = LlmConfig.all
@@ -34,7 +34,7 @@ updated.'
 
   def destroy
     @llm_config.destroy!
-    redirect_to llm_configs_path, notice: 'LLM configuration was successfully destroyed.'
+    redirect_to llm_configs_path, notice: "LLM configuration was successfully destroyed."
   end
 
   private

@@ -8,7 +8,7 @@ class Run < ApplicationRecord
     # Handle missing input or unsaved run
     runner = RubotCore::Runner.new(model_config: {
       provider: "openai",
-      model: "gpt-4.1-nano",
+      model: "gpt-4.1-nano"
     })
 
     result = runner.run(self.input_data)

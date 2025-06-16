@@ -13,7 +13,7 @@ class StepTest < ActiveSupport::TestCase
       run: existing_step.run,
       sequence: existing_step.sequence
     )
-    
+
     assert_not new_step.valid?
     assert_includes new_step.errors[:sequence], "has already been taken"
   end

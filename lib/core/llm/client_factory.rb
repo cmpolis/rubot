@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'open_ai_client'
+require_relative "open_ai_client"
 
 module RubotCore
   module Llm
