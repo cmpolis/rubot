@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../llm/client_factory"
+require_relative "llm/client_factory"
 
 module RubotCore
   class Runner

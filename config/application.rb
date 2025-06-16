@@ -29,8 +29,8 @@ module Rubot
     config.autoload_lib(ignore: %w[assets tasks])
 
 
-    config.autoload_paths << Rails.root.join("lib", "core")
-    config.eager_load_paths << Rails.root.join("lib", "core")
+    # config.autoload_paths << Rails.root.join("lib", "rubot_core")
+    # config.eager_load_paths << Rails.root.join("lib", "rubot_core")
 
     # Configuration for the application, engines, and railties goes here.
     #
