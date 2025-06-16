@@ -41,3 +41,6 @@
 
 # Environment variables (e.g. API keys)
 .env
+
+# IDE files
+.idea/*
